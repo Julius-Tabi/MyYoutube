@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { data } from 'jquery';
+// import { data } from 'jquery';
 // import { data } from 'jquery';
 import {YoutubeService} from '../services/youtube.service'
 @Component({
@@ -19,8 +19,8 @@ export class HomePage {
     })
   }
   
-  getData() {
-    var channelName = this.channelName.nativeElement.value;
+  getData(channelName) {
+    channelName = this.channelName.nativeElement.value;
      this.youtube.getChannels(channelName).subscribe((data) => {
       console.log(data);
       this.channels = data.items;

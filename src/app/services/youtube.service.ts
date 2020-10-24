@@ -10,7 +10,7 @@ export class YoutubeService {
   
   //api call to ritrieve channels
   getChannels(channelName): Observable<any>{
-    const API_KEY = "AIzaSyDg7S5pA2WskXxM_In5Ll6iN7InUsLlF0I";
+    const API_KEY = "AIzaSyBs1LkX6ahgeWzuJb0CYL1eTbpkz2kLZLc";
     const url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + channelName + "&type=channel&key=" + API_KEY + "&maxResults=50";
     return this.http.get<any>(url);
     
